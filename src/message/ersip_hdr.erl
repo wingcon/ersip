@@ -195,5 +195,9 @@ rev_comma_sep_values([Val | Rest], Acc) ->
 -spec use_comma(header_key()) -> boolean().
 use_comma(?ERSIPH_VIA) ->     false;
 use_comma(?ERSIPH_CONTACT) -> false;
+use_comma(?ERSIPH_WWW_AUTHENTICATE) -> false;
+use_comma(?ERSIPH_AUTHORIZATION) -> false;
+use_comma(?ERSIPH_PROXY_AUTHENTICATE) -> false;
+use_comma(?ERSIPH_PROXY_AUTHORIZATION) -> false;
 use_comma(_) ->
     true.
